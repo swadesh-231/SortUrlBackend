@@ -28,10 +28,6 @@ public class AuthServiceImpl implements AuthService {
     @Override
     @Transactional
     public AuthResponse registerUser(RegisterRequest registerRequest) {
-        if (userRepository.count() > 0) {
-            throw new UserAlreadyExistsException("Users", "System restricted to single user");
-        }
-
         if (userRepository.findByEmail(registerRequest.getEmail()).isPresent()) {
             throw new UserAlreadyExistsException("email", registerRequest.getEmail());
         }
