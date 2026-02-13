@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: SortUrlBackend
+
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+        ddl-auto: update
+
+  app:
+    secret: ${JWT_SECRET}
+    expiration: 3600000
+    refreshtoken: 604800000
+    cors:
+      allowed-origins: http://localhost:3000,http://localhost:5173
+
+server:
+  port: 8080

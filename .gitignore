@@ -31,3 +31,18 @@ build/
 
 ### VS Code ###
 .vscode/
+# mac junk
+.DS_Store
+
+# env
+.env
+
+
+# logs
+*.log
+
+
+.idea/
+
+# OS
+Thumbs.db
